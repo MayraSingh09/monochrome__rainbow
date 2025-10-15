@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body onload="launchConfetti()">
+  <div class="ack-container">
+    <div class="tick-circle">
+      <span class="checkmark">✔</span>
+    </div>
+
+    <h1>Order Confirmed 🎉</h1>
+    <p class="thank-text">Thank you for buying our products 💖</p>
+    <p class="small-text">We truly appreciate your support and can’t wait to deliver your order!</p>
+
+    <a href="{{ url_for('products_page') }}" class="shop-btn">Continue Shopping</a>
+  </div>
+
+  <script>
+    function launchConfetti() {
+      var duration = 3 * 1000;
+      var end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 }
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 }
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('index') }}">Home</a> |
+    <a href="{{ url_for('products_page') }}">Products</a> |
+    <a href="{{ url_for('view_cart') }}">Cart</a> |
+    <a href="{{ url_for('view_wishlist') }}">Wishlist</a> |
+    <a href="{{ url_for('index') }}">About</a>
+  </nav>
+
+  <h2>Our Products</h2>
+  <div class="products">
+  {% for p in products %}
+    <div class="product-card">
+      <h3>{{ p.name }}</h3>
+      <p>${{ p.price }}</p>
+      <a href="{{ url_for('add_to_cart', pid=p.id) }}">🛒 Add to Cart</a> |
+      <a href="{{ url_for('add_to_wishlist', pid=p.id) }}">♡ Wishlist</a>
+
+      <div class="review-section">
+        <h4>Reviews 💬</h4>
+        {% if p.reviews %}
+          <ul class="review-list">
+            {% for r in p.reviews %}
+              <li><strong>{{ r.name }}</strong>: {{ r.text }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="no-reviews">No reviews yet! Be the first to leave one 💕</p>
+        {% endif %}
+
+        <!-- Leave a Review Form -->
+        <form action="{{ url_for('add_review', pid=p.id) }}" method="POST" class="review-form">
+          <input type="text" name="name" placeholder="Your name" required>
+          <textarea name="text" placeholder="Write your review..." required></textarea>
+          <button type="submit">Post Review</button>
+        </form>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>
+
+

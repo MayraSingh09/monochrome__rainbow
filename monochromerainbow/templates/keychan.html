@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keychains</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+    <header class="site-header">
+        <h1 class="title">Monochrome__Rainbow</h1>
+        <div class="button-container">
+            {% if session.get('user') %}
+                <a href="{{ url_for('products_page') }}" class="button-one">Shop</a>
+                <a href="{{ url_for('logout') }}" class="button-one">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="button-one">Login</a>
+                <a href="{{ url_for('register') }}" class="button-one">Register</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <h2>Yo!! I make custom keychains, jewelry, and do art commissions!</h2>
+    <h3>As a silly 13-year-old small business owner, I would highly appreciate spreading word about me x3!!</h3>
+    <h4>I hope you will like my business :3</h4>
+    <h5>°❀⋆.ೃ࿔*:･</h5>
+
+    <div class="product-grid">
+        <div class="product keychains">
+            <img src="{{ url_for('static', filename='assets/akito.jpg') }}" alt="Keychains">
+            <h3>Keychains 💖</h3>
+            <p>from $1.00</p>
+        </div>
+
+        <div class="product jewelry">
+            <img src="{{ url_for('static', filename='assets/necklacecros.jpg') }}" alt="Jewelry">
+            <h3>Jewelry 🌸</h3>
+            <p>Clips, Bracelets & Necklaces<br>from $1.50</p>
+        </div>
+
+        <div class="product art">
+            <img src="{{ url_for('static', filename='assets/art.jpg') }}" alt="Art">
+            <h3>Art 🎨</h3>
+            <p>Chibis $3.99<br>Full Piece $9.50</p>
+        </div>
+    </div>
+
+    <p>
+        NOTES!!!:<br>
+        ● If you are unsatisfied with my product, I can make you one for FREE/REFUND you :3<br>
+        ● The jewelry is NOT character themed -- if you would like it to be, please inform me about further details :)
+    </p>
+
+    <p>Email: <a href="mailto:mayrasingh0914@gmail.com">mayrasingh0914@gmail.com</a></p>
+    <p>TikTok: ●°monochrome__rainbow☆☆</p>
+</body>
+
+</html>
+
+

@@ -1,0 +1,984 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1.title, h2.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #5a0808;
+  align-items: center;
+  align-content: center;
+}
+
+h2, h3, h4, p, a, li {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff69b4;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  text-align: center;
+  background: #fafafa; /* default background for all pages */
+}
+
+/* ---------- Homepage Background ---------- */
+body.home-page {
+  background: url("/static/assets/bgbgbg.png") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-items: center;
+}
+
+/* ---------- Buttons ---------- */
+.button-container {
+  display: flex;
+  gap: 15px;
+}
+
+.button-one {
+  background: #fff;
+  color: #ff6f91;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  border: 2px solid #fff;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button-one:hover {
+  background: #ff6f91;
+  color: #fff;
+  border-color: #ff6f91;
+  transform: translateY(-2px);
+}
+/* Form Container */
+.form-container {
+  width: 300px;
+  margin: 60px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Headings */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Labels */
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Inputs */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Button */
+.form-container .button-one {
+  width: 100%;
+  padding: 10px;
+  background: #9b086c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-container .button-one:hover {
+  background: #ba5979;
+}
+
+/* Links */
+.form-container p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.form-container a {
+  color: #ef187c;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+.form-container .error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* ---------- Headings ---------- */
+h2, h3, h4 {
+  margin: 15px auto;
+  max-width: 700px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h3 {
+  font-size: 20px;
+  color: #9e3211;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h4 {
+  font-size: 18px;
+  color: #467e09;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ---------- Product Grid ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.product {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.15);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #444;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+  margin: 6px 0;
+}
+
+/* ---------- Notes Section ---------- */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 15px auto;
+  max-width: 750px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p a {
+  color: #ff6f91;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p a:hover {
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* ---------- Products Grid ---------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.product-card {
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  margin: 5px 0 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 14px 14px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px; /* bigger links */
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Icon links (Cart & Wishlist) */
+.icon-link {
+  font-size: 26px; /* bigger icons */
+  padding: 10px 14px;
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: #ff3b3b;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Products grid (large) */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* bigger cards */
+  gap: 25px;
+  padding: 30px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.25s ease;
+  font-size: 18px; /* enlarge product text */
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.product-card p {
+  font-size: 18px;
+  margin: 5px 0 12px;
+}
+
+.product-card button {
+  background: #ff758c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background: #ff3b3b;
+}
+
+/*------checkout-------*/
+.checkout-page {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    padding: 20px;
+
+.checkout-page {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/assets/bgbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.checkout-container {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ffb3c6;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px 50px;
+  width: 400px;
+  text-align: center;
+}
+
+.checkout-container h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #ff6f91;
+  margin-bottom: 20px;
+}
+
+/* Smaller, cute boxes */
+.checkout-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-container label {
+  text-align: left;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.checkout-container input {
+  width: 80%;
+  margin: 0 auto;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1.5px solid #ffb3c6;
+  outline: none;
+  transition: 0.2s;
+}
+
+.checkout-container input:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 0 4px #ffb6c1;
+}
+
+/* Button styling */
+.checkout-container button {
+  margin-top: 15px;
+  background-color: #ff6f91;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-container button:hover {
+  background-color: #ff4e78;
+  transform: scale(1.05);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 500px) {
+  .checkout-container {
+    width: 85%;
+    padding: 25px 20px;
+  }
+
+  .checkout-container input {
+    width: 100%;
+  }
+}
+}
+
+/* Checkout Box */
+.checkout-page .checkout-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+.checkout-page h1 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.checkout-page h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Form Inputs */
+.checkout-page form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #555;
+}
+
+.checkout-page form input[type="text"],
+.checkout-page form input[type="number"],
+.checkout-page form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.checkout-page form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button */
+.checkout-page button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #ff00ae;
+    color: rgb(114, 12, 74);
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkout-page button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Section Divider */
+.checkout-page hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Cart Preview */
+.checkout-page .cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.checkout-page .cart-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkout-page .cart-summary li {
+    margin: 5px 0;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+    color: #444;
+}
+
+.checkout-page .cart-summary p {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+
+/* Container for order confirmation */
+.confirm-box {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.confirm-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Main heading only inside confirm-box */
+.confirm-box .confirm-title {
+  font-size: 2.2rem;
+  color: #16a34a; /* nice green for confirmed order */
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs inside confirm-box */
+.confirm-box p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+/* Order info section */
+.order-info {
+  text-align: left;
+  margin-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+/* h2 inside order-info only */
+.order-info h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.3rem;
+}
+
+/* Item list */
+.order-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.order-info ul li {
+  background: #f0f9ff;
+  margin: 0.4rem 0;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1e3a8a; /* soft blue for items */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button styling */
+.confirm-box .button {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.confirm-box .button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+
+
+
+
+
+
+
+/*ty*/
+
+.ack-container {
+  margin-top: 80px;
+}
+
+.tick-circle {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark {
+  font-size: 70px;
+  color: white;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.thank-text {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.small-text {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.shop-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.shop-btn:hover {
+  background: #388e3c;
+}
+/* ========= ORDER CONFIRMATION PAGE (scoped) ========= */
+.order-confirm-page {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+}
+
+.order-confirm-page .order-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.order-confirm-page .order-thanks {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.order-confirm-page .order-info {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+.order-confirm-page .info-title {
+    color: #444;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.order-confirm-page .shipping-details,
+.order-confirm-page .delivery-estimate {
+    color: #555;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.order-confirm-page .order-items {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.order-confirm-page .item {
+    background: #f8f8f8;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    transition: background 0.2s ease;
+}
+
+.order-confirm-page .item:hover {
+    background: #efefef;
+}
+
+.order-confirm-page .order-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: #4b8cf5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.order-confirm-page .order-button:hover {
+    background: #3a74d9;
+    transform: translateY(-2px);
+}
+
+/*review*/
+/* ===== PRODUCTS PAGE ===== */
+.products-page {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #fdfdfd, #f7f7f7);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.products-nav {
+  margin-bottom: 30px;
+}
+
+.products-nav a {
+  color: #5b7cf5;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0 8px;
+}
+
+.products-nav a:hover {
+  text-decoration: underline;
+}
+
+.products-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.product-btn {
+  background: #5b7cf5;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 14px;
+  text-decoration: none;
+  margin: 5px 3px;
+  transition: background 0.3s ease;
+}
+
+.product-btn:hover {
+  background: #4769d8;
+}
+
+/* ===== REVIEWS SECTION ===== */
+.reviews-section {
+  width: 100%;
+  margin-top: 15px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.reviews-section h4 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.review-list li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.no-reviews {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review-form input,
+.review-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.review-form textarea {
+  resize: none;
+  height: 60px;
+}
+
+.review-form button {
+  background: #5b7cf5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #4769d8;
+}

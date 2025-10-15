@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="order-confirm-page">
+    <h1 class="order-title">Order Confirmed 🎉</h1>
+    <p class="order-thanks">Thank you, {{ order.first }} {{ order.last }}! Your order has been placed successfully.</p>
+
+    <div class="order-info">
+        <h2 class="info-title">Shipping Details</h2>
+        <p class="shipping-details">{{ order.address }}, {{ order.city }}, {{ order.state }} {{ order.zipcode }}</p>
+
+        <h2 class="info-title">Estimated Delivery</h2>
+        <p class="delivery-estimate">Between <strong>7</strong> and <strong>8</strong> days</p>
+
+        <h2 class="info-title">Items Ordered</h2>
+        <ul class="order-items">
+            {% for item in order.cart %}
+                <li class="item">{{ item.name }} × {{ item.quantity }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <a href="{{ url_for('thank_you') }}" class="order-button">Proceed</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='products.css') }}">
+</head>
+<body class="products-page">
+  <nav class="products-nav">
+    <a href="{{ url_for('index') }}">Home</a> |
+    <a href="{{ url_for('products_page') }}">Products</a> |
+    <a href="{{ url_for('view_cart') }}">Cart</a> |
+    <a href="{{ url_for('view_wishlist') }}">Wishlist</a> |
+    <a href="{{ url_for('index') }}">About</a>
+  </nav>
+
+  <h2 class="products-title">Our Products 💫</h2>
+
+  <div class="products-container">
+    {% for p in products %}
+    <div class="product-card">
+      <h3>{{ p.name }}</h3>
+      <p>${{ p.price }}</p>
+      <a href="{{ url_for('add_to_cart', pid=p.id) }}" class="product-btn">🛒 Add to Cart</a>
+      <a href="{{ url_for('add_to_wishlist', pid=p.id) }}" class="product-btn">♡ Wishlist</a>
+
+      
+      <div class="reviews-section">
+        <h4>Reviews 💬</h4>
+        {% if p.reviews %}
+          <ul class="review-list">
+            {% for r in p.reviews %}
+              <li>
+                <strong>{{ r.name }}</strong>: {{ r.text }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="no-reviews">No reviews yet!</p>
+        {% endif %}
+
+       
+        <form method="POST" action="{{ url_for('add_review', pid=p.id) }}" class="review-form">
+          <input type="text" name="name" placeholder="Your name" required>
+          <textarea name="text" placeholder="Write a review..." required></textarea>
+          <button type="submit">Post Review</button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
